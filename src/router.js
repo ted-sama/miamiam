@@ -36,6 +36,15 @@ const routes = [
     },
   },
   {
+    path: "/shop/checkout",
+    name: "checkout",
+    component: () => import("@/views/shop/CheckoutView.vue"),
+    meta: {
+      requiresAuth: true,
+      title: "Passer la commande",
+    },
+  },
+  {
     path: "/admin/login",
     name: "admin-login",
     component: () => import("@/views/admin/LoginView.vue"),
@@ -105,7 +114,7 @@ router.beforeEach((to, from, next) => {
       if (expires_at < Date.now()) {
         localStorage.clear();
         if (to.name === "landing") {
-          next();
+          next({ name: "landing" });
         } else {
           next({ name: "login" });
         }

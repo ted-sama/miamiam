@@ -12,7 +12,7 @@ const showAdminNavbar = [
   "admin-foods",
   "admin-orders",
 ];
-const showShopNavbar = ["shop", "cart"];
+const showShopNavbar = ["shop", "cart", "checkout"];
 </script>
 
 <template>
