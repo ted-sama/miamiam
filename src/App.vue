@@ -11,8 +11,15 @@ const showAdminNavbar = [
   "admin-categories",
   "admin-foods",
   "admin-orders",
+  "admin-orders-details",
 ];
-const showShopNavbar = ["shop", "cart", "checkout"];
+const showShopNavbar = [
+  "shop",
+  "shop-foods",
+  "shop-search-results",
+  "cart",
+  "checkout",
+];
 </script>
 
 <template>

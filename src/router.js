@@ -27,6 +27,24 @@ const routes = [
     },
   },
   {
+    path: "/shop/foods",
+    name: "shop-foods",
+    component: () => import("@/views/shop/ShopFoodsView.vue"),
+    meta: {
+      requiresAuth: true,
+      title: "Boutique - Tout les plats",
+    },
+  },
+  {
+    path: "/shop/results",
+    name: "shop-search-results",
+    component: () => import("@/views/shop/SearchView.vue"),
+    meta: {
+      requiresAuth: true,
+      title: "Boutique - Tout les plats",
+    },
+  },
+  {
     path: "/shop/cart",
     name: "cart",
     component: () => import("@/views/shop/CartView.vue"),
@@ -87,6 +105,24 @@ const routes = [
     meta: {
       requiresAdminAuth: true,
       title: "Gestion des plats",
+    },
+  },
+  {
+    path: "/admin/orders",
+    name: "admin-orders",
+    component: () => import("@/views/admin/ManageOrdersView.vue"),
+    meta: {
+      requiresAdminAuth: true,
+      title: "Gestion des commandes",
+    },
+  },
+  {
+    path: "/admin/orders/:id",
+    name: "admin-orders-details",
+    component: () => import("@/views/admin/AdminOrderDetailsView.vue"),
+    meta: {
+      requiresAdminAuth: true,
+      title: "Détails de commande",
     },
   },
 ];

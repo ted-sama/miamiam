@@ -8,6 +8,18 @@
           <img :src="logo" alt="Miamiam" class="h-16" />
         </router-link>
       </div>
+      <!-- input with search icon -->
+      <form @submit.prevent="search">
+        <div class="relative text-neutral-500 w-[600px]">
+          <Search class="absolute top-2.5 left-2.5" :size="22" />
+          <input
+            type="text"
+            class="w-[600px] p-2 pl-10 border rounded-lg"
+            placeholder="Rechercher un plat..."
+            v-model="searchQuery"
+          />
+        </div>
+      </form>
       <div class="hidden sm:flex gap-x-5">
         <Button as-child>
           <router-link to="/shop/cart"
@@ -45,6 +57,7 @@
 
 <script setup>
 import logo from "../assets/miamiam_logo.png";
+import { Search } from "lucide-vue-next";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -67,6 +80,7 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 
 const pageTop = ref(true);
+const searchQuery = ref("");
 
 const handleScroll = () => {
   // when the user scrolls, check the pageYOffset
@@ -84,6 +98,13 @@ const handleLogout = () => {
   localStorage.clear();
   // redirect the user to the login page
   router.push("/");
+};
+
+const search = () => {
+  router.push({
+    name: "shop-search-results",
+    query: { search_query: searchQuery.value },
+  });
 };
 
 onMounted(() => {

@@ -13,10 +13,7 @@
 
       <div class="flex space-x-4 mb-8">
         <Button variant="secondary" as-child>
-          <router-link to="/shop/categories">Toutes les catégories</router-link>
-        </Button>
-        <Button variant="secondary" as-child>
-          <router-link to="/shop/foods">Tout les plats</router-link>
+          <router-link to="/shop/foods">Afficher tout les plats</router-link>
         </Button>
       </div>
       <CategoryCarousel
@@ -24,7 +21,7 @@
         :items="featuredCategories"
       />
       <FoodCarousel title="Plats populaires" :items="popularFoods" />
-      <FoodGrid title="Tous les plats" :items="allFoods" />
+      <FoodGrid :items="allFoods" />
       <Button variant="secondary" as-child>
         <router-link to="/shop/foods">Voir tout les plats</router-link>
       </Button>

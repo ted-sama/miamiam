@@ -5,7 +5,7 @@
       class="absolute left-0 top-[45%] flex items-center invisible sm:visible"
     >
       <button
-        class="bg-white bg-opacity-50 rounded-full p-2"
+        class="bg-[#fc9329] bg-opacity-70 rounded-full p-2"
         @click="scroll(-1)"
         v-if="showLeftArrow"
       >
@@ -16,7 +16,7 @@
       class="absolute right-0 top-[45%] flex items-center invisible sm:visible"
     >
       <button
-        class="bg-white bg-opacity-50 rounded-full p-2"
+        class="bg-[#fc9329] bg-opacity-70 rounded-full p-2"
         @click="scroll(1)"
         v-if="showRightArrow"
       >

@@ -5,7 +5,7 @@
       class="absolute left-0 top-[45%] flex items-center invisible sm:visible"
     >
       <button
-        class="bg-white bg-opacity-50 rounded-full p-2"
+        class="bg-[#fc9329] bg-opacity-70 rounded-full p-2"
         @click="scroll(-1)"
         v-if="showLeftArrow"
       >
@@ -16,7 +16,7 @@
       class="absolute right-0 top-[45%] flex items-center invisible sm:visible"
     >
       <button
-        class="bg-white bg-opacity-50 rounded-full p-2"
+        class="bg-[#fc9329] bg-opacity-70 rounded-full p-2"
         @click="scroll(1)"
         v-if="showRightArrow"
       >
@@ -29,7 +29,7 @@
       @scroll="handleScroll"
     >
       <div class="flex space-x-4">
-        <router-link to="/" v-for="item in items" :key="item.id">
+        <router-link :to="`/shop/foods?category=${item.id}`" v-for="item in items" :key="item.id">
           <div class="h-32 w-64 md:h-48 md:w-96 rounded-xl">
             <img
               :src="item.image"

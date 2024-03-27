@@ -1,7 +1,7 @@
 <template>
   <Container>
     <div class="py-20">
-      <h1 class="text-4xl font-semibold mb-8">Votre panier</h1>
+      <h1 class="text-2xl font-semibold mb-8">Votre panier</h1>
       <div>
         <Loading v-if="loading" />
         <div class="lg:grid lg:grid-cols-4 lg:gap-8" v-else>
@@ -11,7 +11,7 @@
                 Sous-total ({{ cartTotalProducts }} produits) :
                 <span class="font-bold">{{ cartTotalPrice.toFixed(2) }} €</span>
               </h2>
-              <Button class="w-full" asChild>
+              <Button class="w-full" asChild v-show="cart.length !== 0">
                 <router-link to="/shop/checkout"> Commander </router-link>
               </Button>
             </div>

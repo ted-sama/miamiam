@@ -1,7 +1,7 @@
 <template>
   <Container>
     <div class="py-20">
-      <h1 class="text-4xl font-semibold mb-8">Catégories</h1>
+      <h1 class="text-2xl font-semibold mb-8">Catégories</h1>
       <div class="sm:flex items-center sm:justify-between">
         <p class="text-neutral-500 mb-4 sm:mb-0">
           Nombre de catégories : {{ categoriesNb }}
