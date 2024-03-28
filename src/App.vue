@@ -19,6 +19,8 @@ const showShopNavbar = [
   "shop-search-results",
   "cart",
   "checkout",
+  "orders",
+  "orders-details",
 ];
 </script>
 

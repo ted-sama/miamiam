@@ -41,7 +41,7 @@ const routes = [
     component: () => import("@/views/shop/SearchView.vue"),
     meta: {
       requiresAuth: true,
-      title: "Boutique - Tout les plats",
+      title: "Boutique - Resultats de recherche",
     },
   },
   {
@@ -60,6 +60,24 @@ const routes = [
     meta: {
       requiresAuth: true,
       title: "Passer la commande",
+    },
+  },
+  {
+    path: "/account/orders",
+    name: "orders",
+    component: () => import("@/views/shop/OrdersView.vue"),
+    meta: {
+      requiresAuth: true,
+      title: "Mes commandes",
+    },
+  },
+  {
+    path: "/account/orders/:id",
+    name: "orders-details",
+    component: () => import("@/views/shop/OrderDetailsView.vue"),
+    meta: {
+      requiresAuth: true,
+      title: "Détails de commande",
     },
   },
   {

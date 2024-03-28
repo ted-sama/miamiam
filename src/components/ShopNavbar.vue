@@ -35,11 +35,11 @@
           <DropdownMenuContent class="w-56">
             <DropdownMenuLabel>Mon compte</DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
+            <!-- <DropdownMenuItem>
               <router-link to="/account" class="w-full flex items-center"
                 ><CircleUser class="mr-1 h-5" />Mon profil</router-link
               >
-            </DropdownMenuItem>
+            </DropdownMenuItem> -->
             <DropdownMenuItem>
               <router-link to="/account/orders" class="w-full flex items-center"
                 ><History class="mr-1 h-5" />Mes commandes</router-link
