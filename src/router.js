@@ -9,6 +9,15 @@ const routes = [
     component: Landing,
   },
   {
+    path: "/signup",
+    name: "signup",
+    component: () => import("@/views/shop/RegisterView.vue"),
+    meta: {
+      skipIfLoggedIn: true,
+      title: "S'inscrire",
+    },
+  },
+  {
     path: "/login",
     name: "login",
     component: () => import("@/views/shop/LoginView.vue"),
